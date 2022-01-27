@@ -1,0 +1,9 @@
+<div class="app-section">
+  <h3>{{ sectionTitle }}</h3>
+  <mat-list>
+    <mat-list-item
+      *ngFor="let news of method | slice: 0:posts; let i = index"
+      >{{ news.title }}</mat-list-item
+    >
+  </mat-list>
+</div>

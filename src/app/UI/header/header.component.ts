@@ -1,5 +1,4 @@
-import { Component, OnInit } from '@angular/core';
-import { MatButtonToggleGroup } from '@angular/material/button-toggle';
+import { Component, Input, OnInit } from '@angular/core';
 import { NewsdataService } from '../../services/newsdata.service';
 
 @Component({
@@ -12,5 +11,8 @@ export class HeaderComponent implements OnInit {
 
   brand: string = 'LatestNews';
   tagline = 'Stay updated with latest news...';
+
+  @Input() drawer: any;
+
   ngOnInit(): void {}
 }

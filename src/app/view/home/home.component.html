@@ -1,2 +1,47 @@
-<news-container></news-container>
-<h1>Hello world!</h1>
+<div class="hero">
+  <div class="row">
+    <div class="col-sm-9">
+      <img [src]="heroImage" [title]="'image'" />
+    </div>
+    <div class="col-sm-3">
+      <app-section
+        [sectionTitle]="'Latest News'"
+        [method]="getLatestNews()"
+        [posts]="5"
+      ></app-section>
+    </div>
+  </div>
+</div>
+<div class="row">
+  <div class="col-sm-6">
+    <app-section
+      [sectionTitle]="'Sports News'"
+      [method]="getCatNews('sports')"
+      [posts]="5"
+    ></app-section>
+  </div>
+  <div class="col-sm-6">
+    <app-section
+      [sectionTitle]="'Entertainment News'"
+      [method]="getCatNews('entertainment')"
+      [posts]="5"
+    ></app-section>
+  </div>
+</div>
+<div class="row">
+  <div class="col-sm-4">
+    <app-section
+      [sectionTitle]="'Business News'"
+      [method]="getCatNews('business')"
+      [posts]="5"
+    ></app-section>
+  </div>
+  <div class="col-sm-4">
+    <app-section
+      [sectionTitle]="'Politics News'"
+      [method]="getCatNews('politics')"
+      [posts]="5"
+    ></app-section>
+  </div>
+  <div class="col-sm-4"></div>
+</div>

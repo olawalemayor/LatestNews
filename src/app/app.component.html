@@ -1,4 +1,19 @@
-<app-header></app-header>
 <app-wrapper>
-  <router-outlet></router-outlet>
+  <mat-drawer-container class="drawer-container" autosize>
+    <mat-drawer #drawer class="sidenav" mode="side">
+      <mat-list>
+        <div *ngFor="let item of menu" class="menu-item">
+          <span>
+            <mat-list-item>{{ item }}</mat-list-item>
+            <mat-divider></mat-divider>
+          </span>
+        </div>
+      </mat-list>
+    </mat-drawer>
+
+    <div class="sidenav-content">
+      <app-header [drawer]="drawer"></app-header>
+      <router-outlet></router-outlet>
+    </div>
+  </mat-drawer-container>
 </app-wrapper>

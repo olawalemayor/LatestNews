@@ -1,0 +1,19 @@
+.drawer-container {
+  width: 100%;
+  height: 100%;
+  border: 2px solid rgba(255, 255, 2555, 0.5);
+}
+
+.sidenav-content {
+  height: 100%;
+  align-items: center;
+  justify-content: center;
+}
+
+.sidenav {
+  padding: 20px;
+}
+
+.menu-item {
+  padding: 0.4rem 0;
+}

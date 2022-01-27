@@ -6,6 +6,8 @@ import { MatIconModule } from '@angular/material/icon';
 import { MatSidenavModule } from '@angular/material/sidenav';
 import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatMenuModule } from '@angular/material/menu';
+import { MatListModule } from '@angular/material/list';
+import { MatDividerModule } from '@angular/material/divider';
 
 @NgModule({
   imports: [
@@ -16,6 +18,8 @@ import { MatMenuModule } from '@angular/material/menu';
     MatSidenavModule,
     MatToolbarModule,
     MatMenuModule,
+    MatListModule,
+    MatDividerModule,
   ],
   exports: [
     MatButtonModule,
@@ -25,6 +29,8 @@ import { MatMenuModule } from '@angular/material/menu';
     MatSidenavModule,
     MatToolbarModule,
     MatMenuModule,
+    MatListModule,
+    MatDividerModule,
   ],
 })
 export class AppMaterialModule {}
