@@ -1,6 +1,5 @@
 import { Component, OnInit } from '@angular/core';
 import { NewsdataService } from '../../services/newsdata.service';
-import { News } from '../../models/news';
 
 @Component({
   selector: 'app-home',
@@ -10,17 +9,19 @@ import { News } from '../../models/news';
 export class HomeComponent implements OnInit {
   heroImage = '../../../assets/images/pexels-matheus-bertelli-2674271.jpg';
 
+  //get Latest news - Uncategorized
   getLatestNews = () => {
-    this.nds.getLatestNews();
-    return this.nds.latestNews;
+    this.newsDataService.getLatestNews();
+    return this.newsDataService.latestNews;
   };
 
+  //get Latest News - Categorized
   getCatNews(Category: string) {
-    this.nds.getNewsbyCategory(Category);
-    return this.nds.news;
+    this.newsDataService.getNewsbyCategory(Category);
+    return this.newsDataService.news;
   }
 
-  constructor(private nds: NewsdataService) {}
+  constructor(private newsDataService: NewsdataService) {}
 
   ngOnInit(): void {}
 }

@@ -9,7 +9,7 @@ import { NewsdataService } from './services/newsdata.service';
 export class AppComponent implements OnInit {
   title = 'LatestNews';
 
-  menu: string[] = [];
+  menu: string[] = []; //side navigation menu
 
   constructor(private newsService: NewsdataService) {}
 

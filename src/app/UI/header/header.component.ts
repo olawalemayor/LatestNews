@@ -1,5 +1,4 @@
 import { Component, Input, OnInit } from '@angular/core';
-import { NewsdataService } from '../../services/newsdata.service';
 
 @Component({
   selector: 'app-header',
@@ -7,12 +6,12 @@ import { NewsdataService } from '../../services/newsdata.service';
   styleUrls: ['./header.component.css'],
 })
 export class HeaderComponent implements OnInit {
-  constructor(private newsDataService: NewsdataService) {}
+  constructor() {}
 
   brand: string = 'LatestNews';
   tagline = 'Stay updated with latest news...';
 
-  @Input() drawer: any;
+  @Input() drawer: any; //drawer directive from Material design in AppComponent
 
   ngOnInit(): void {}
 }
