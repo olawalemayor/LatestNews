@@ -1,27 +1,6 @@
-.wrapper {
-  max-width: 1440px;
-  margin: 1.5rem auto;
+.spacer {
+  flex: 1 1 auto;
 }
-
-.logo {
-  margin-bottom: 20px;
-}
-
-.brand {
-  display: block;
-  text-align: center;
-  margin-bottom: 0px !important;
-}
-
-.tagline {
-  text-align: center;
-  font-style: italic;
-  color: #ff0000;
-}
-.navigations {
-  display: block;
-  text-align: center;
-}
-.nav-btn {
-  margin-right: 0.1rem;
+p {
+  margin-bottom: 0;
 }

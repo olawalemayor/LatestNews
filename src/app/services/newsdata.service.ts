@@ -9,6 +9,7 @@ export class NewsdataService {
   apiKey: string = 'pub_4026fb2695f366740ce602fa9b33b038a876';
   endPoint: string = 'https://newsdata.io/api/1/';
   news: News[] = [];
+  menu = menu;
   getNewsbyCategory(newsCategory: string) {
     this.http
       .get<dataResponse>(
@@ -22,3 +23,16 @@ export class NewsdataService {
 
   constructor(private http: HttpClient) {}
 }
+
+const menu = [
+  'Top',
+  'World',
+  'Sports',
+  'Business',
+  'Science',
+  'Entertainment',
+  'Food',
+  'Politics',
+  'Environment',
+  'Technology',
+];

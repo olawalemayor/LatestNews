@@ -11,24 +11,6 @@ export class HeaderComponent implements OnInit {
   constructor(private newsDataService: NewsdataService) {}
 
   brand: string = 'LatestNews';
-
-  menu = [
-    'Top',
-    'World',
-    'Sports',
-    'Business',
-    'Science',
-    'Entertainment',
-    'Food',
-    'Politics',
-    'Environment',
-    'Technology',
-  ];
-
-  getNews(butonGroup: MatButtonToggleGroup) {
-    const category: string = butonGroup.value;
-    this.newsDataService.getNewsbyCategory(category.toLowerCase());
-  }
-
+  tagline = 'Stay updated with latest news...';
   ngOnInit(): void {}
 }

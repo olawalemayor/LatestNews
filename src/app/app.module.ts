@@ -8,6 +8,7 @@ import { HeaderComponent } from './UI/header/header.component';
 import { HomeComponent } from './view/home/home.component';
 import { ContainerComponent } from './view/container/container.component';
 import { AppMaterialModule } from './modules/app-material/app-material.module';
+import { WrapperComponent } from './UI/wrapper/wrapper.component';
 
 @NgModule({
   declarations: [
@@ -15,6 +16,7 @@ import { AppMaterialModule } from './modules/app-material/app-material.module';
     HeaderComponent,
     HomeComponent,
     ContainerComponent,
+    WrapperComponent,
   ],
   imports: [
     BrowserModule,

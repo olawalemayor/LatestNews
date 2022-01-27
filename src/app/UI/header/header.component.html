@@ -1,25 +1,43 @@
-<div>
-  <div class="wrapper">
-    <div class="logo">
-      <span class="brand mat-display-4">{{ brand }}</span>
-      <p class="tagline">Stay updated with latest news...</p>
-    </div>
-    <div class="navigations">
-      <mat-button-toggle-group
-        name="newsCategories"
-        aria-label="News Menu"
-        #group="matButtonToggleGroup"
-      >
-        <mat-button-toggle
-          value="{{ item }}"
-          class="nav-btn"
-          *ngFor="let item of menu"
-          (click)="getNews(group)"
-        >
-          {{ item }}</mat-button-toggle
-        >
-      </mat-button-toggle-group>
-    </div>
-    <div class="mat-display-3" *ngIf="group.value">{{ group.value }} News</div>
-  </div>
-</div>
+<p>
+  <mat-toolbar color="primary">
+    <button
+      mat-icon-button
+      class="icon"
+      aria-label="icon-button with menu icon"
+    >
+      <mat-icon>menu</mat-icon>
+    </button>
+    <span>{{ brand }} App</span>
+    <span class="spacer"></span>
+    <button
+      mat-icon-button
+      class="favorite-icon"
+      aria-label="icon-button with heart icon"
+    >
+      <mat-icon>favorite</mat-icon>
+    </button>
+    <button
+      mat-icon-button
+      class="icon"
+      aria-label="icon-button with share icon and menu"
+      [matMenuTriggerFor]="menu"
+    >
+      <mat-icon>share</mat-icon>
+    </button>
+
+    <mat-menu #menu="matMenu">
+      <button mat-menu-item>
+        <mat-icon>textsms</mat-icon>
+        <span>Message</span>
+      </button>
+      <button mat-menu-item>
+        <mat-icon>email</mat-icon>
+        <span>Email</span>
+      </button>
+      <button mat-menu-item>
+        <mat-icon>apps</mat-icon>
+        <span>Others</span>
+      </button>
+    </mat-menu>
+  </mat-toolbar>
+</p>
