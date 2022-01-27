@@ -1,0 +1,25 @@
+<div>
+  <div class="wrapper">
+    <div class="logo">
+      <span class="brand mat-display-4">{{ brand }}</span>
+      <p class="tagline">Stay updated with latest news...</p>
+    </div>
+    <div class="navigations">
+      <mat-button-toggle-group
+        name="newsCategories"
+        aria-label="News Menu"
+        #group="matButtonToggleGroup"
+      >
+        <mat-button-toggle
+          value="{{ item }}"
+          class="nav-btn"
+          *ngFor="let item of menu"
+          (click)="getNews(group)"
+        >
+          {{ item }}</mat-button-toggle
+        >
+      </mat-button-toggle-group>
+    </div>
+    <div class="mat-display-3" *ngIf="group.value">{{ group.value }} News</div>
+  </div>
+</div>
