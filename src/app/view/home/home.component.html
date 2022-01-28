@@ -4,44 +4,44 @@
       <img [src]="heroImage" [title]="'image'" />
     </div>
     <div class="col-sm-3">
-      <app-section
-        [sectionTitle]="'Latest News'"
-        [method]="getLatestNews()"
+      <app-section-card
+        [header]="'Latest News'"
+        [category]="''"
         [posts]="5"
-      ></app-section>
+      ></app-section-card>
     </div>
   </div>
 </div>
 <div class="row">
   <div class="col-sm-6">
-    <app-section
-      [sectionTitle]="'Sports News'"
-      [method]="getCatNews('sports')"
+    <app-section-card
+      [header]="'Sports News'"
+      [category]="'sports'"
       [posts]="5"
-    ></app-section>
+    ></app-section-card>
   </div>
   <div class="col-sm-6">
-    <app-section
-      [sectionTitle]="'Entertainment News'"
-      [method]="getCatNews('entertainment')"
+    <app-section-card
+      [header]="'Entertainment News'"
+      [category]="'entertainment'"
       [posts]="5"
-    ></app-section>
+    ></app-section-card>
   </div>
 </div>
 <div class="row">
   <div class="col-sm-4">
-    <app-section
-      [sectionTitle]="'Business News'"
-      [method]="getCatNews('business')"
+    <app-section-card
+      [header]="'Business News'"
+      [category]="'business'"
       [posts]="5"
-    ></app-section>
+    ></app-section-card>
   </div>
   <div class="col-sm-4">
-    <app-section
-      [sectionTitle]="'Politics News'"
-      [method]="getCatNews('politics')"
+    <app-section-card
+      [header]="'Politics News'"
+      [category]="'politics'"
       [posts]="5"
-    ></app-section>
+    ></app-section-card>
   </div>
   <div class="col-sm-4"></div>
 </div>

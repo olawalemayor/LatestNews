@@ -2,6 +2,7 @@ import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { dataResponse, News } from '../models/news';
 import { ApiDetails } from './api-details';
+import { Observable } from 'rxjs';
 
 @Injectable({
   providedIn: 'root',
@@ -14,24 +15,19 @@ export class NewsdataService {
   //I've set the language parameter to english on the request URL so it is not dynamic
 
   //To get Latest News sorted by category
-  getNewsbyCategory(newsCategory: string) {
-    this.http
-      .get<dataResponse>(
-        `${endPoint}news?apikey=${apiKey}&category=${newsCategory}&language=en`,
-        {}
-      )
-      .subscribe((response) => {
-        this.news = response.results;
-      });
+  getNewsbyCategory(newsCategory: string): Observable<dataResponse> {
+    return this.http.get<dataResponse>(
+      `${endPoint}news?apikey=${apiKey}&category=${newsCategory}&language=en`,
+      {}
+    );
   }
 
   //To get Latest News unsorted
-  getLatestNews() {
-    this.http
-      .get<dataResponse>(`${endPoint}news?apikey=${apiKey}&language=en`, {})
-      .subscribe((response) => {
-        this.latestNews = response.results;
-      });
+  getLatestNews(): Observable<dataResponse> {
+    return this.http.get<dataResponse>(
+      `${endPoint}news?apikey=${apiKey}&language=en`,
+      {}
+    );
   }
 
   constructor(private http: HttpClient) {}
