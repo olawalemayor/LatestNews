@@ -11,6 +11,7 @@ export class SectionCardComponent implements OnInit {
   @Input() header: string = '';
   @Input() category: string = '';
   @Input() posts: number = 0;
+  @Input() class: string = '';
 
   latestNews: News[] = [];
 

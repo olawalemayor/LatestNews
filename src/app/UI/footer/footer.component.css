@@ -1,0 +1,22 @@
+.footer {
+  padding-top: 0.4rem;
+}
+
+.copyright {
+  text-align: center;
+}
+
+.social-icons {
+  text-align: center;
+}
+
+.social-icons > a {
+  font-size: 30px;
+  padding: 0 5px;
+}
+
+@media (min-width: 576px) {
+  .social-icons {
+    text-align: end;
+  }
+}

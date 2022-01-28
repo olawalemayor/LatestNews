@@ -1,7 +1,4 @@
 /* You can add global styles to this file, and also import other style files */
-* {
-  overflow: hidden;
-}
 html,
 body {
   height: 100%;
@@ -13,10 +10,4 @@ body {
 
 .warn-screen {
   display: none;
-}
-
-@media (min-width: 1440.1px) {
-  * {
-    display: none;
-  }
 }

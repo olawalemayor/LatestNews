@@ -9,6 +9,7 @@ import { HomeComponent } from './view/home/home.component';
 import { AppMaterialModule } from './modules/app-material/app-material.module';
 import { SectionCardComponent } from './common/section-card/section-card.component';
 import { IgxCarouselModule, IgxSliderModule } from 'igniteui-angular';
+import { FooterComponent } from './UI/footer/footer.component';
 
 @NgModule({
   declarations: [
@@ -16,6 +17,7 @@ import { IgxCarouselModule, IgxSliderModule } from 'igniteui-angular';
     HeaderComponent,
     HomeComponent,
     SectionCardComponent,
+    FooterComponent,
   ],
   imports: [
     BrowserModule,

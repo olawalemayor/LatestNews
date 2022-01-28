@@ -9,3 +9,10 @@ a {
   color: #fff;
   text-decoration: none;
 }
+
+.wrapper {
+  max-width: 1200px;
+  display: flex;
+  flex: 1 1 auto;
+  margin: 0 auto;
+}

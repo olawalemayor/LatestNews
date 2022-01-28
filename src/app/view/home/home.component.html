@@ -8,7 +8,14 @@
         [header]="'Latest News'"
         [category]="''"
         [posts]="5"
+        [class]="'hide-card'"
       ></app-section-card>
+      <mat-list class="hide-mobile">
+        <mat-list-item
+          *ngFor="let item of latestNews | slice: 0:5; let i = index"
+          >{{ item.title }}</mat-list-item
+        >
+      </mat-list>
     </div>
   </div>
 </div>

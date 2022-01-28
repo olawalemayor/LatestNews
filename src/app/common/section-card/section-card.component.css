@@ -1,0 +1,10 @@
+h3,
+.carousel-container {
+  margin-left: 0.5rem;
+}
+
+@media (min-width: 768px) {
+  .hide-card {
+    display: none;
+  }
+}
