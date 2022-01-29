@@ -17,7 +17,8 @@ export class NewsdataService {
   //To get Latest News sorted by category
   getNewsbyCategory(newsCategory: string): Observable<dataResponse> {
     return this.http.get<dataResponse>(
-      `${endPoint}news?apikey=${apiKey}&category=${newsCategory}&language=en`,
+      //`${endPoint}news?apikey=${apiKey}&category=${newsCategory}&language=en`,
+      endPoint,
       {}
     );
   }
@@ -25,7 +26,8 @@ export class NewsdataService {
   //To get Latest News unsorted
   getLatestNews(): Observable<dataResponse> {
     return this.http.get<dataResponse>(
-      `${endPoint}news?apikey=${apiKey}&language=en`,
+      //`${endPoint}news?apikey=${apiKey}&language=en`,
+      endPoint,
       {}
     );
   }

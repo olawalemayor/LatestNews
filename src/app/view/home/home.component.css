@@ -2,6 +2,25 @@ img {
   width: 100%;
 }
 
+a {
+  text-decoration: none;
+  color: unset;
+}
+
+.hide-mobile {
+  background-color: #424242;
+  padding-top: 2rem;
+  margin-left: 0.5rem;
+}
+.list-item {
+  padding-bottom: 3rem;
+}
+.mobile-section {
+  margin-top: 1rem;
+  padding-top: 1rem;
+  border-top: 2px solid blue;
+}
+
 @media (max-width: 768px) {
   .hide-mobile {
     display: none;
