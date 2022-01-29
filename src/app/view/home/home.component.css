@@ -16,9 +16,9 @@ a {
   padding-bottom: 3rem;
 }
 .mobile-section {
-  margin-top: 1rem;
+  margin: 1rem auto 0.5rem auto;
   padding-top: 1rem;
-  border-top: 2px solid blue;
+  border-top: 1px solid rgba(74, 74, 75, 0.24);
 }
 
 @media (max-width: 768px) {
