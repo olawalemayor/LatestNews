@@ -1,6 +1,10 @@
 .spacer {
   flex: 1 1 auto;
 }
+
+.brand-logo {
+  cursor: pointer;
+}
 p {
   margin-bottom: 0;
 }

@@ -4,27 +4,19 @@ import { HttpClientModule } from '@angular/common/http';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { HeaderComponent } from './UI/header/header.component';
-import { HomeComponent } from './view/home/home.component';
-import { AppMaterialModule } from './modules/app-material/app-material.module';
-import { SectionCardComponent } from './common/section-card/section-card.component';
-import { FooterComponent } from './UI/footer/footer.component';
+import { AppMaterialModule, UIModule, PagesModule } from './modules';
 import { CarouselModule } from 'ng-carousel-cdk';
 
 @NgModule({
-  declarations: [
-    AppComponent,
-    HeaderComponent,
-    HomeComponent,
-    SectionCardComponent,
-    FooterComponent,
-  ],
+  declarations: [AppComponent],
   imports: [
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
     HttpClientModule,
     AppMaterialModule,
+    UIModule,
+    PagesModule,
     CarouselModule,
   ],
   providers: [],

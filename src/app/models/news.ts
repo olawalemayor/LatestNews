@@ -12,9 +12,22 @@ export interface News {
   source_id: string;
 }
 
+export interface ArchiveNews {
+  title: string;
+  link: string;
+  keywords: string;
+  creator: string;
+  video_url: string;
+  description: string;
+  content: string;
+  pubDate: string;
+  image_url: string;
+  source_id: string;
+}
+
 export interface dataResponse {
   status: string;
   totalResults: number;
-  results: News[];
+  results: News[] | ArchiveNews[];
   nextPage: number;
 }

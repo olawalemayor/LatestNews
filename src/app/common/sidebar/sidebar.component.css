@@ -1,0 +1,35 @@
+a {
+  text-decoration: none;
+}
+
+.app-sidebar {
+  padding-top: 1rem;
+  background-color: #000;
+}
+
+.app-sidebar > h3 {
+  color: aliceblue;
+  text-align: center;
+}
+
+.app-sidebar p {
+  border-bottom: 1px solid rgb(116, 115, 115);
+}
+
+.app-sidebar p:hover {
+  color: rgb(173, 173, 173) !important;
+}
+
+.app-sidebar-list {
+  padding-top: 2rem;
+}
+
+.list-item {
+  padding-bottom: 1rem;
+}
+
+@media (min-width: 1023.99px) {
+  .app-sidebar {
+    margin-bottom: 1.5rem;
+  }
+}

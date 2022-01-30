@@ -4,6 +4,19 @@
   width: 100%;
   z-index: 99999;
 }
+
+.router {
+  margin: 12vh auto 0 auto;
+  max-width: 1200px;
+}
+
+.footer {
+  max-width: 1200px;
+  margin: 0 auto;
+  border-top: 2px solid;
+}
+
+/*App drawer*/
 .drawer-container {
   position: fixed;
   top: 5%;
@@ -24,18 +37,8 @@
 }
 
 .menu-item {
+  cursor: pointer;
   padding: 0.4rem 0;
-}
-
-.router {
-  margin: 12vh auto 0 auto;
-  max-width: 1200px;
-}
-
-.footer {
-  max-width: 1200px;
-  margin: 0 auto;
-  border-top: 2px solid;
 }
 
 @media (min-width: 576px) and (max-width: 1200px) {

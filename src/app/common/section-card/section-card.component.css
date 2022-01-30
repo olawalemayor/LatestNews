@@ -23,7 +23,7 @@ h3 {
   -webkit-box-orient: vertical;
 }
 
-@media (min-width: 768px) {
+@media (min-width: 1023px) {
   .hide-card {
     display: none;
   }

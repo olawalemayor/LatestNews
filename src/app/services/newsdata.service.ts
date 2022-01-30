@@ -1,6 +1,6 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
-import { dataResponse, News } from '../models/news';
+import { dataResponse, News, ArchiveNews } from '../models/news';
 import { ApiDetails } from './api-details';
 import { Observable } from 'rxjs';
 
@@ -10,6 +10,7 @@ import { Observable } from 'rxjs';
 export class NewsdataService {
   news: News[] = []; //Categorized news
   latestNews: News[] = []; //Latest new - unsorted
+  featuredNews: ArchiveNews[] = [];
   menu = menu;
 
   //I've set the language parameter to english on the request URL so it is not dynamic
@@ -32,11 +33,19 @@ export class NewsdataService {
     );
   }
 
+  getArchiveNews(): Observable<dataResponse> {
+    return this.http.get<dataResponse>(endPoint2, {});
+  }
+
+  getNews(): Observable<dataResponse> {
+    return this.http.get<dataResponse>(endPoint, {});
+  }
+
   constructor(private http: HttpClient) {}
 }
 
 //Kept the API credentials in another location
-const { apiKey, endPoint } = ApiDetails;
+const { apiKey, endPoint, endPoint2 } = ApiDetails;
 
 //Interface for the Category menu
 const menu = [

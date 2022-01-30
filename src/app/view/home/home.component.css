@@ -1,3 +1,7 @@
+.row.section {
+  padding-top: 1rem;
+}
+
 img {
   width: 100%;
 }
@@ -8,12 +12,25 @@ a {
 }
 
 .hide-mobile {
-  background-color: #424242;
   padding-top: 2rem;
   margin-left: 0.5rem;
+  border: 1px solid rgba(0, 0, 0, 0.2);
+}
+
+.mobile-section .hide-mobile {
+  margin: 0 1rem;
+}
+.hide-mobile * {
+  color: #000;
+}
+.hide-mobile p {
+  border-bottom: 1px solid rgb(116, 115, 115);
+}
+.hide-mobile p:hover {
+  color: purple;
 }
 .list-item {
-  padding-bottom: 3rem;
+  padding-bottom: 1.5rem;
 }
 .mobile-section {
   margin: 1rem auto 0.5rem auto;
@@ -21,7 +38,7 @@ a {
   border-top: 1px solid rgba(74, 74, 75, 0.24);
 }
 
-@media (max-width: 768px) {
+@media (max-width: 1023px) {
   .hide-mobile {
     display: none;
     padding-left: 0.7rem;

@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { News } from 'src/app/models/news';
 import { NewsdataService } from '../../services/newsdata.service';
+import { ArchiveNews } from '../../models/news';
 
 @Component({
   selector: 'app-home',
@@ -10,7 +11,7 @@ import { NewsdataService } from '../../services/newsdata.service';
 export class HomeComponent implements OnInit {
   heroImage = '../../../assets/images/pexels-matheus-bertelli-2674271.jpg';
 
-  latestNews: News[] = [];
+  latestNews: News[] | ArchiveNews[] = [];
 
   constructor(private newsDataService: NewsdataService) {}
 
