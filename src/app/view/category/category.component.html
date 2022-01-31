@@ -1,1 +1,19 @@
-<p>category works!</p>
+<div class="row">
+  <div class="col-md-7 blog-grid">
+    <mat-grid-list cols="2" rowHeight="300px">
+      <mat-grid-tile
+        *ngFor="let item of categorizedNews"
+        [ngStyle]="{ 'background-image': 'url(' + item.image_url + ')' }"
+      >
+        <div class="grid-content">
+          <h3>{{ item.title }}</h3>
+          <p>{{ item.description }}</p>
+        </div>
+      </mat-grid-tile>
+    </mat-grid-list>
+  </div>
+  <div class="col-md-1"></div>
+  <div class="col-md-4">
+    <app-sidebar></app-sidebar>
+  </div>
+</div>
