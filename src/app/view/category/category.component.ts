@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { NewsdataService } from '../../services/newsdata.service';
 import { News, ArchiveNews } from '../../models/news';
-import { ActivatedRoute } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
 
 @Component({
   templateUrl: './category.component.html',
@@ -10,15 +10,19 @@ import { ActivatedRoute } from '@angular/router';
 export class CategoryComponent implements OnInit {
   constructor(
     private newsDataService: NewsdataService,
-    private route: ActivatedRoute
+    private route: ActivatedRoute,
+    private router: Router
   ) {}
 
-  categorizedNews: News[] | ArchiveNews[] = [];
+  categorizedNews: News[] = [];
+  category: string = this.route.snapshot.params['title'];
 
   ngOnInit(): void {
-    const category = this.route.params['title'];
-    this.newsDataService.getNewsbyCategory(category).subscribe((response) => {
-      this.categorizedNews = response.results;
-    });
+    this.router.routeReuseStrategy.shouldReuseRoute = () => false;
+    this.newsDataService
+      .getNewsbyCategory(this.category)
+      .subscribe((response) => {
+        this.categorizedNews = response.results;
+      });
   }
 }

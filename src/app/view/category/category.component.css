@@ -1,5 +1,9 @@
+a {
+  text-decoration: none;
+}
 mat-grid-tile {
-  background: lightblue;
+  background: rgb(65, 65, 65);
+  cursor: pointer;
 }
 
 .blog-grid h3 {

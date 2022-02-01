@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { NewsdataService } from './services/newsdata.service';
 import { Router } from '@angular/router';
+import { MatDrawer } from '@angular/material/sidenav';
 
 @Component({
   selector: 'app-root',
@@ -10,9 +11,9 @@ import { Router } from '@angular/router';
 export class AppComponent implements OnInit {
   title = 'LatestNews';
 
-  getNews(title) {
-    console.log('clicked');
+  getNews(title, drawer: MatDrawer) {
     this.router.navigate([`category/${title.toLowerCase()}`]);
+    drawer.close();
   }
 
   menu: string[] = []; //side navigation menu

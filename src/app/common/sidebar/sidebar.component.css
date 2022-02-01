@@ -26,6 +26,7 @@ a {
 
 .list-item {
   padding-bottom: 1rem;
+  cursor: pointer;
 }
 
 @media (min-width: 1023.99px) {

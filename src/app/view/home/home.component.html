@@ -5,106 +5,101 @@
       <img [src]="heroImage" [title]="'image'" />
     </div>
     <div class="col-md-4">
-      <a href=""
-        ><app-section-card
-          [header]="'Latest News'"
-          [category]="''"
-          [posts]="5"
-          [class]="'hide-card'"
-        ></app-section-card
-      ></a>
+      <app-section-card
+        [header]="'Latest News'"
+        [category]="''"
+        [posts]="5"
+        [class]="'hide-card'"
+      ></app-section-card>
       <mat-list class="hide-mobile"
         ><!--Removes view on mobile-->
-        <a href=""
-          ><mat-list-item
-            class="list-item"
-            *ngFor="let item of latestNews | slice: 0:5; let i = index"
-            ><p>{{ item.title }}</p>
-          </mat-list-item></a
-        >
+        <mat-list-item
+          class="list-item"
+          (click)="getNews(item.title)"
+          *ngFor="let item of latestNews | slice: 0:5; let i = index"
+          ><a [routerLink]="'news/' + item.title"
+            ><p>{{ item.title }}</p></a
+          >
+        </mat-list-item>
       </mat-list>
     </div>
   </div>
 </div>
 <div class="row section">
   <div class="col-md-6 mobile-section">
-    <a href=""
-      ><app-section-card
-        [header]="'Sports News'"
-        [category]="'sports'"
-        [posts]="3"
-      ></app-section-card
-    ></a>
+    <app-section-card
+      [header]="'Sports News'"
+      [category]="'sports'"
+      [posts]="3"
+    ></app-section-card>
     <mat-list class="hide-mobile">
       <!--Removes view on mobile-->
-      <a href=""
-        ><mat-list-item
-          class="list-item"
-          *ngFor="let item of latestNews | slice: 0:3; let i = index"
-          ><p>{{ item.title }}</p>
-        </mat-list-item></a
-      >
+      <mat-list-item
+        class="list-item"
+        (click)="getNews(item.title)"
+        *ngFor="let item of latestNews | slice: 0:3; let i = index"
+        ><a [routerLink]="'news/' + item.title"
+          ><p>{{ item.title }}</p></a
+        >
+      </mat-list-item>
     </mat-list>
   </div>
   <div class="col-md-6 mobile-section">
-    <a href=""
-      ><app-section-card
-        [header]="'Entertainment News'"
-        [category]="'entertainment'"
-        [posts]="3"
-      ></app-section-card
-    ></a>
+    <app-section-card
+      [header]="'Entertainment News'"
+      [category]="'entertainment'"
+      [posts]="3"
+    ></app-section-card>
     <mat-list class="hide-mobile">
       <!--Removes view on mobile-->
-      <a href=""
-        ><mat-list-item
-          class="list-item"
-          *ngFor="let item of latestNews | slice: 0:3; let i = index"
-          ><p>{{ item.title }}</p>
-        </mat-list-item></a
-      >
+      <mat-list-item
+        class="list-item"
+        (click)="getNews(item.title)"
+        *ngFor="let item of latestNews | slice: 0:3; let i = index"
+        ><a [routerLink]="'news/' + item.title"
+          ><p>{{ item.title }}</p></a
+        >
+      </mat-list-item>
     </mat-list>
   </div>
 </div>
 
 <div class="row section">
   <div class="col-md-4 mobile-section">
-    <a href=""
-      ><app-section-card
-        [header]="'Business News'"
-        [category]="'business'"
-        [posts]="3"
-      ></app-section-card
-    ></a>
+    <app-section-card
+      [header]="'Business News'"
+      [category]="'business'"
+      [posts]="3"
+    ></app-section-card>
     <mat-list class="hide-mobile">
       <!--Removes view on mobile-->
-      <a href=""
-        ><mat-list-item
-          class="list-item"
-          *ngFor="let item of latestNews | slice: 0:3; let i = index"
-          ><p>{{ item.title }}</p>
-        </mat-list-item></a
-      >
+      <mat-list-item
+        class="list-item"
+        (click)="getNews(item.title)"
+        *ngFor="let item of latestNews | slice: 0:3; let i = index"
+        ><a [routerLink]="'news/' + item.title"
+          ><p>{{ item.title }}</p></a
+        >
+      </mat-list-item>
     </mat-list>
   </div>
 
   <div class="col-md-4 mobile-section">
-    <a href=""
-      ><app-section-card
-        [header]="'Politics News'"
-        [category]="'politics'"
-        [posts]="3"
-      ></app-section-card
-    ></a>
+    <app-section-card
+      [header]="'Politics News'"
+      [category]="'politics'"
+      [posts]="3"
+    ></app-section-card>
     <mat-list class="hide-mobile">
       <!--Removes view on mobile-->
-      <a href=""
-        ><mat-list-item
-          class="list-item"
-          *ngFor="let item of latestNews | slice: 0:3; let i = index"
-          ><p>{{ item.title }}</p>
-        </mat-list-item></a
-      >
+      <mat-list-item
+        class="list-item"
+        (click)="getNews(item.title)"
+        *ngFor="let item of latestNews | slice: 0:3; let i = index"
+        ><a [routerLink]="'news/' + item.title"
+          ><p>{{ item.title }}</p></a
+        >
+      </mat-list-item>
     </mat-list>
   </div>
 

@@ -1,7 +1,7 @@
 export interface News {
   title: string;
   link: string;
-  keywords: string;
+  keywords: string[];
   creator: string | null;
   video_url: string | null;
   description: string;
@@ -15,7 +15,7 @@ export interface News {
 export interface ArchiveNews {
   title: string;
   link: string;
-  keywords: string;
+  keywords: string[];
   creator: string;
   video_url: string;
   description: string;
@@ -28,6 +28,6 @@ export interface ArchiveNews {
 export interface dataResponse {
   status: string;
   totalResults: number;
-  results: News[] | ArchiveNews[];
+  results: any[];
   nextPage: number;
 }

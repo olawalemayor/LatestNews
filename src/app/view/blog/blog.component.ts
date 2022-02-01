@@ -1,25 +1,27 @@
 import { Component, OnInit } from '@angular/core';
 import { NewsdataService } from '../../services/newsdata.service';
-import { News, ArchiveNews } from '../../models/news';
-import { ActivatedRoute } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
+import { News } from '../../models/news';
 
 @Component({
   templateUrl: 'blog.component.html',
   styleUrls: ['blog.component.css'],
 })
 export class BlogComponent implements OnInit {
-  news: News[] | ArchiveNews[] = [];
+  news: News[] = [];
+
+  pageTitle: string = this.route.snapshot.params['title'];
 
   constructor(
     private newsDataService: NewsdataService,
-    private route: ActivatedRoute
+    private route: ActivatedRoute,
+    private router: Router
   ) {}
 
   ngOnInit() {
-    this.newsDataService.getNews().subscribe((response) => {
-      this.news = response.results.filter(
-        (m) => m.title === this.route.params['title']
-      );
+    this.router.routeReuseStrategy.shouldReuseRoute = () => false;
+    this.newsDataService.getNews(this.pageTitle).subscribe((response) => {
+      this.news = this.newsDataService.selectedNews;
     });
   }
 }

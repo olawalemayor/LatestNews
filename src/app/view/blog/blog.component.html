@@ -1,5 +1,41 @@
 <div class="row">
-  <div class="col-md-8">This is the Blog Component</div>
+  <div class="col-md-8">
+    <div *ngIf="news[0]">
+      <div class="blog">
+        <h2>{{ news[0].title }}</h2>
+        <img [src]="news[0].image_url" *ngIf="news[0].image_url" />
+        <p *ngIf="news[0].full_description">
+          {{ news[0].full_description }}
+        </p>
+        <p *ngIf="!news[0].full_description">
+          {{ news[0].description }}
+        </p>
+        <iframe
+          [src]="news[0].video_url"
+          *ngIf="news[0].video_url"
+          frameborder="0"
+        ></iframe>
+
+        <div *ngIf="news[0].creator">
+          <h4>Author: {{ news[0].creator }}</h4>
+        </div>
+      </div>
+      <mat-chip-list
+        #chipList
+        aria-label="Video keywords"
+        multiple
+        *ngIf="news[0].keywords"
+      >
+        <mat-chip
+          *ngFor="let keyword of news[0].keywords"
+          [selected]="keyword"
+          [value]="keyword"
+        >
+          {{ keyword }}
+        </mat-chip>
+      </mat-chip-list>
+    </div>
+  </div>
   <div class="col-md-4">
     <app-sidebar></app-sidebar>
   </div>

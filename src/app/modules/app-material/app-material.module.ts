@@ -9,6 +9,7 @@ import { MatMenuModule } from '@angular/material/menu';
 import { MatListModule } from '@angular/material/list';
 import { MatDividerModule } from '@angular/material/divider';
 import { MatGridListModule } from '@angular/material/grid-list';
+import { MatChipsModule } from '@angular/material/chips';
 
 @NgModule({
   imports: [],
@@ -23,6 +24,7 @@ import { MatGridListModule } from '@angular/material/grid-list';
     MatListModule,
     MatDividerModule,
     MatGridListModule,
+    MatChipsModule,
   ],
 })
 export class AppMaterialModule {}

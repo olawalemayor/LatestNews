@@ -30,6 +30,7 @@ a {
   color: purple;
 }
 .list-item {
+  cursor: pointer;
   padding-bottom: 1.5rem;
 }
 .mobile-section {
