@@ -15,8 +15,7 @@
         ><!--Removes view on mobile-->
         <mat-list-item
           class="list-item"
-          (click)="getNews(item.title)"
-          *ngFor="let item of latestNews | slice: 0:5; let i = index"
+          *ngFor="let item of entertainmentNews | slice: 0:5; let i = index"
           ><a [routerLink]="'news/' + item.title"
             ><p>{{ item.title }}</p></a
           >
@@ -25,6 +24,8 @@
     </div>
   </div>
 </div>
+<!--End of Hero-->
+
 <div class="row section">
   <div class="col-md-6 mobile-section">
     <app-section-card
@@ -36,8 +37,7 @@
       <!--Removes view on mobile-->
       <mat-list-item
         class="list-item"
-        (click)="getNews(item.title)"
-        *ngFor="let item of latestNews | slice: 0:3; let i = index"
+        *ngFor="let item of sportNews | slice: 0:3; let i = index"
         ><a [routerLink]="'news/' + item.title"
           ><p>{{ item.title }}</p></a
         >
@@ -54,8 +54,7 @@
       <!--Removes view on mobile-->
       <mat-list-item
         class="list-item"
-        (click)="getNews(item.title)"
-        *ngFor="let item of latestNews | slice: 0:3; let i = index"
+        *ngFor="let item of entertainmentNews | slice: 0:3; let i = index"
         ><a [routerLink]="'news/' + item.title"
           ><p>{{ item.title }}</p></a
         >
@@ -75,8 +74,7 @@
       <!--Removes view on mobile-->
       <mat-list-item
         class="list-item"
-        (click)="getNews(item.title)"
-        *ngFor="let item of latestNews | slice: 0:3; let i = index"
+        *ngFor="let item of businessNews | slice: 0:3; let i = index"
         ><a [routerLink]="'news/' + item.title"
           ><p>{{ item.title }}</p></a
         >
@@ -94,8 +92,7 @@
       <!--Removes view on mobile-->
       <mat-list-item
         class="list-item"
-        (click)="getNews(item.title)"
-        *ngFor="let item of latestNews | slice: 0:3; let i = index"
+        *ngFor="let item of politicsNews | slice: 0:3; let i = index"
         ><a [routerLink]="'news/' + item.title"
           ><p>{{ item.title }}</p></a
         >

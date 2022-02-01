@@ -17,7 +17,11 @@ export class HomeComponent implements OnInit {
 
   heroImage = '../../../assets/images/pexels-matheus-bertelli-2674271.jpg';
 
-  latestNews: News[] | ArchiveNews[] = [];
+  latestNews: News[] = [];
+  sportNews: News[] = [];
+  entertainmentNews: News[] = [];
+  businessNews: News[] = [];
+  politicsNews: News[] = [];
 
   getNews(title) {
     this.router.navigate([`news/${title}`]);
@@ -26,6 +30,20 @@ export class HomeComponent implements OnInit {
   ngOnInit(): void {
     this.newsDataService.getLatestNews().subscribe((response) => {
       this.latestNews = response.results;
+    });
+    this.newsDataService.getNewsbyCategory('sports').subscribe((response) => {
+      this.sportNews = response.results;
+    });
+    this.newsDataService
+      .getNewsbyCategory('entertainment')
+      .subscribe((response) => {
+        this.entertainmentNews = response.results;
+      });
+    this.newsDataService.getNewsbyCategory('business').subscribe((response) => {
+      this.businessNews = response.results;
+    });
+    this.newsDataService.getNewsbyCategory('politics').subscribe((response) => {
+      this.politicsNews = response.results;
     });
   }
 }
